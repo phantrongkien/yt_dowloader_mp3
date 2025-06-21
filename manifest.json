@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Downloader Local",
+  "version": "1.0",
+  "description": "Add download buttons to YouTube videos for local processing",
+  "permissions": ["scripting"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}
